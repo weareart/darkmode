@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Dark Mode</title>
+        <link rel="stylesheet" href="darkmode.css">
+        <script src="darkmode.js" type="text/javascript"></script>
+    </head>
+
+    <body id="darkmodebody">
+        <div class="toggle__darkmode">  
+            <input type="checkbox" id="checkbox1" onclick="darkmodefun()" class="toggle__darkmode--checked">
+            <label for="checkbox1" class="toggle__darkmode--label">Dark Mode</label> 
+            
+            <button class="toggle__darkmode--background" id="toggle__darkmode--background"></button>
+        
+        </div>  
+      
+
+        <script>
+
+            let bodyd =document.getElementById("darkmodebody");
+            let checkboxid = document.getElementById("checkbox1");
+            let buttonbgdarkmode = document.getElementById("toggle__darkmode--background");
+            
+           
+
+
+            let darkmodefun = function()  {
+            if(checkboxid.checked==true){
+                bodyd.style.backgroundColor = "#292929";
+                bodyd.style.color = "white";
+                buttonbgdarkmode.style.backgroundColor = "#9dffba"; 
+            }
+             else if(checkboxid.checked==false){
+                 bodyd.style.backgroundColor = "#eee";
+                 bodyd.style.color = "black"
+                 buttonbgdarkmode.style.backgroundColor = "#e2aeae"; 
+             }
+
+             
+}
+        </script>
+    </body>
+</html>
